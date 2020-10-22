@@ -1,0 +1,87 @@
+REarth = 6.371 * 10^6
+
+REarth =
+
+     6371000
+
+RSun = 695.51 * 10^6
+
+RSun =
+
+   695510000
+
+K186PlanetRadii = REarth * [1.09 1.09 1.43 1.3 1.11]
+
+K186PlanetRadii =
+
+  Columns 1 through 4
+
+                   6944390                   6944390                   9110530                   8282300
+
+  Column 5
+
+                   7071810
+
+Kepler186SunRadius = RSun * 0.47
+
+Kepler186SunRadius =
+
+   326889700
+
+Kepler186ToEarth = 5.278 * 10^18
+
+Kepler186ToEarth =
+
+                 5.278e+18
+
+Ratio = (K186PlanetRadii.^2)./(Kepler186SunRadius^2)
+
+Ratio =
+
+  Columns 1 through 4
+
+      0.000451300415028076      0.000451300415028076      0.000776756349373716      0.000641947396176625
+
+  Column 5
+
+      0.000468013838360485
+
+TK186 = 3788
+
+TK186 =
+
+        3788
+
+sigma = 5.67*10^-8
+
+sigma =
+
+                  5.67e-08
+
+
+FM = Ratio*sigma*TK186^4
+
+FM =
+
+  Columns 1 through 4
+
+           5268.5204864322           5268.5204864322          9067.92150720075          7494.15000595104
+
+  Column 5
+
+          5463.63445108419
+
+
+FT = FM.*(1-Ratio)
+
+FT =
+
+  Columns 1 through 4
+
+          5266.14280095009          5266.14280095009          9060.87794159441          7489.33915586816
+
+  Column 5
+
+          5461.07739455333
+
+diary off
